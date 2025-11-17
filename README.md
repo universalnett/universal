@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Universal Net Website
 
 ## Project info
@@ -63,3 +64,6 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+=======
+# universal
+>>>>>>> 941c6e40a3718f7c00b8dc34948c5b8c12d71958
