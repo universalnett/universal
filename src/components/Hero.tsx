@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-bg.jpg";
 import heroVideo from "@/assets/video.mp4";
 import { Navbar } from "./Navbar";
+import { BRAND_NAME, LAUNCH_YEAR } from "@/lib/constants";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -165,6 +166,7 @@ export const Hero = () => {
           </motion.div>
         </div>
 
+                  
 
       </div>
       </div>

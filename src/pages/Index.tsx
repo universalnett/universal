@@ -1,7 +1,8 @@
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
-import { Button } from "@/components/ui/button";
+import PhoneButton from "@/components/PhoneButton";
+import { DISPLAY_PHONE } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
@@ -25,35 +26,35 @@ const Index = () => {
   const services = [
     {
       icon: Globe,
-      title: "Fiber Broadband",
-      description: "Ultra-fast fiber internet with speeds up to 10 Gbps for residential and commercial use.",
+      title: "Billing & Account Help",
+      description: "Clarify charges, review bills, and guide disputes with providers.",
       features: [
-        "Symmetric Upload/Download",
-        "99.9% Uptime Guarantee",
-        "No Data Caps",
-        "IPv6 Ready"
+        "Bill explanations",
+        "Dispute guidance",
+        "Payment plan options",
+        "Provider communication templates"
       ]
     },
     {
       icon: Smartphone,
-      title: "Business Solutions",
-      description: "Enterprise-grade connectivity solutions tailored for your business needs.",
+      title: "Plan Guidance",
+      description: "Neutral comparisons and plain-English explanations to help you evaluate options.",
       features: [
-        "Dedicated Bandwidth",
-        "SLA Backed Service",
-        "Priority Support",
-        "Custom Solutions"
+        "Side-by-side plan summaries",
+        "Cost vs. value analysis",
+        "Feature clarifications",
+        "Recommendation guidance"
       ]
     },
     {
       icon: Shield,
-      title: "Network Security",
-      description: "Advanced security solutions to protect your network infrastructure and data.",
+      title: "Troubleshooting Guidance",
+      description: "Step-by-step troubleshooting to resolve common connectivity and setup issues.",
       features: [
-        "DDoS Protection",
-        "Firewall Management",
-        "24/7 Monitoring",
-        "Threat Intelligence"
+        "Router & Wi‑Fi tips",
+        "Speed and signal checks",
+        "When to escalate",
+        "On-call guidance"
       ]
     }
   ];
@@ -80,22 +81,12 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Internet service provider <span className="text-highlight">problems</span> and their{" "}
-                <span className="text-highlight">solutions</span>
+                Connectivity & billing issues — we assist and guide
               </h2>
               <p className="text-muted-foreground mb-6">
-                Dealing with unreliable internet experiences that slow down productivity and
-                drive meaningful connections? Our internet service providers offer solutions,
-                strategy, and expertise in all facets of online connectivity that aim to provide
-                faster, more reliable connections delivered by the choice and measure of the
-                service selected by the values of clients of the network.
+                If you're navigating account changes, confusing bills, or technical setup with a provider, we guide you through the process and help facilitate the right next steps.
               </p>
-              <Link to="/about">
-                <Button className="neon-glow group">
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <PhoneButton className="neon-glow group">{DISPLAY_PHONE}</PhoneButton>
             </motion.div>
 
             <motion.div
@@ -136,20 +127,20 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Why choose <span className="text-highlight">Universal Net</span> for your connectivity?
+                Why use our assistance?
               </h2>
               <p className="text-muted-foreground mb-6">
-                Experience the next generation of internet connectivity with our cutting-edge
-                fiber-optic infrastructure and enterprise-grade WiFi solutions.
+                We offer neutral, educational assistance to help you understand bills, compare plans,
+                and communicate effectively with providers. We do not sell or activate services.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Lightning-fast fiber speeds up to 10 Gbps",
-                  "Advanced WiFi 6 routers included",
-                  "Zero buffering, zero lag guaranteed",
-                  "99.9% network uptime SLA",
-                  "24/7 expert technical support",
-                  "Free professional installation"
+                  "Clear billing explanations",
+                  "Plan comparison guidance",
+                  "Practical troubleshooting steps",
+                  "Provider escalation templates",
+                  "Privacy & account safety tips",
+                  "Help completing provider workflows"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -159,12 +150,7 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/services">
-                <Button className="neon-glow group">
-                  Discover Our Technology
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <PhoneButton className="neon-glow group">{DISPLAY_PHONE}</PhoneButton>
             </motion.div>
 
             <motion.div
@@ -180,8 +166,8 @@ const Index = () => {
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-lg p-4 shadow-lg">
-                <p className="text-sm text-muted-foreground mb-1">Connection Speed</p>
-                <p className="text-2xl font-bold text-primary">10 Gbps</p>
+                <p className="text-sm text-muted-foreground mb-1">Support Focus</p>
+                <p className="text-2xl font-bold text-primary">Assistance & Guidance</p>
               </div>
             </motion.div>
           </div>
@@ -214,12 +200,11 @@ const Index = () => {
               className="order-1 lg:order-2"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Built on <span className="text-highlight">fiber-optic</span> excellence
+                Expert guidance backed by experience
               </h2>
               <p className="text-muted-foreground mb-6">
-                Our state-of-the-art fiber infrastructure delivers unmatched speed, reliability,
-                and scalability. Using advanced optical networking technology, we ensure your
-                connection is future-proof and capable of handling tomorrow's demands.
+                Our team focuses on clear, practical advice for navigating provider processes,
+                resolving billing issues, and improving the outcome of support interactions.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-card border border-border rounded-lg p-4">
@@ -254,13 +239,13 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Experience <span className="text-highlight">gigabit speeds</span> like never before
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Say goodbye to buffering and slow downloads. Our fiber network delivers consistent
-              gigabit speeds that handle everything from 4K streaming to massive file transfers.
-            </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Get help that saves you time
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Reduce friction when dealing with providers — our practical guidance helps you
+                get faster, clearer resolutions.
+              </p>
           </motion.div>
 
           <motion.div
@@ -279,9 +264,9 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
             {[
-              { icon: TrendingUp, title: "Consistent Speed", description: "Same speed during peak hours" },
-              { icon: Wifi, title: "Unlimited Devices", description: "Connect all your smart home devices" },
-              { icon: Shield, title: "Secure Network", description: "Enterprise-grade security included" }
+              { icon: TrendingUp, title: "Helpful Insights", description: "Practical guidance to evaluate options" },
+              { icon: Wifi, title: "Provider Navigation", description: "We help facilitate conversations with providers" },
+              { icon: Shield, title: "Privacy Respect", description: "We never request provider passwords or sensitive credentials" }
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -313,11 +298,11 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Internet that <span className="text-highlight">powers</span> your whole home
+                Assistance that supports your household
               </h2>
               <p className="text-muted-foreground mb-6">
-                From remote work and online learning to gaming and streaming, Universal Net keeps
-                your entire family connected without slowdowns or interruptions.
+                We help families navigate provider options and setup processes so everyone can
+                stay connected with less hassle.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-4">
@@ -325,9 +310,9 @@ const Index = () => {
                     <Users className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Family-Friendly Plans</h3>
+                    <h3 className="font-semibold mb-1">Family-Focused Assistance</h3>
                     <p className="text-sm text-muted-foreground">
-                      Plans designed for households with multiple users and devices
+                      Help choosing and configuring options that work best for multiple users
                     </p>
                   </div>
                 </div>
@@ -354,11 +339,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <Link to="/plans">
-                <Button className="neon-glow">
-                  Find Your Perfect Plan
-                </Button>
-              </Link>
+              <PhoneButton className="neon-glow">{DISPLAY_PHONE}</PhoneButton>
             </motion.div>
 
             <motion.div
@@ -388,12 +369,10 @@ const Index = () => {
             className="max-w-2xl mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Explore unique internet service provider <span className="text-highlight">services</span>
+              Explore the kinds of assistance we provide
             </h2>
             <p className="text-muted-foreground">
-              Crafting compelling digital experiences that captivate audiences and drive
-              meaningful connections. Our internet service providers offer solutions and
-              expertise to fuel your online success.
+              We provide neutral, educational help to clarify provider terms, assist with billing inquiries, and support account navigation. We do not sell plans or represent providers.
             </p>
           </motion.div>
 
@@ -475,25 +454,25 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col gap-6 lg:pl-12"
             >
-              <Link to="/plans" className="block">
-                <button className="group relative p-8 bg-card border-2 border-primary rounded-2xl hover:bg-primary transition-all duration-300 text-left overflow-hidden w-full">
+              <a href={`tel:${"+18888541959"}`} className="block">
+                <div className="group relative p-8 bg-card border-2 border-primary rounded-2xl hover:bg-primary transition-all duration-300 text-left overflow-hidden w-full">
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-foreground transition-colors">View Our Plans</h3>
-                    <p className="text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">Explore flexible internet packages</p>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-foreground transition-colors">{DISPLAY_PHONE}</h3>
+                    <p className="text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">Request assistance by phone</p>
                   </div>
                   <ArrowRight className="absolute bottom-4 right-4 w-8 h-8 text-primary group-hover:text-primary-foreground group-hover:translate-x-2 transition-all" />
-                </button>
-              </Link>
+                </div>
+              </a>
 
-              <Link to="/coverage" className="block">
-                <button className="group relative p-8 bg-card border-2 border-border rounded-2xl hover:border-primary transition-all duration-300 text-left overflow-hidden w-full">
+              <a href={`tel:${"+18888541959"}`} className="block">
+                <div className="group relative p-8 bg-card border-2 border-border rounded-2xl hover:border-primary transition-all duration-300 text-left overflow-hidden w-full">
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2">Check Coverage</h3>
-                    <p className="text-muted-foreground">See if we're in your area</p>
+                    <h3 className="text-2xl font-bold mb-2">{DISPLAY_PHONE}</h3>
+                    <p className="text-muted-foreground">Request assistance by phone</p>
                   </div>
                   <ArrowRight className="absolute bottom-4 right-4 w-8 h-8 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all" />
-                </button>
-              </Link>
+                </div>
+              </a>
             </motion.div>
           </div>
         </div>

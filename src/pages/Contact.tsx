@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import PhoneButton from "@/components/PhoneButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,8 +40,7 @@ const Contact = () => {
               Get in <span className="text-highlight">Touch</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Have questions about our services? Our team is here to help. Reach out and we'll
-              respond as soon as possible.
+              Universal Net provides independent third-party assistance and guidance for cable, internet, and streaming customers. We help with account, billing, and service navigation — we do not sell plans or act as a service provider.
             </p>
           </motion.div>
 
@@ -85,9 +84,7 @@ const Contact = () => {
                         rows={5}
                       />
                     </div>
-                    <Button className="w-full neon-glow">
-                      Send Message
-                    </Button>
+                    <PhoneButton className="w-full neon-glow">{"(888) 854-1959"}</PhoneButton>
                   </form>
                 </CardContent>
               </Card>
@@ -140,18 +137,11 @@ const Contact = () => {
               Need <span className="text-highlight">Immediate</span> Help?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              For urgent technical support or service inquiries, our 24/7 support team is
-              standing by to assist you.
+              For urgent assistance with account, billing, or provider interactions, our support team is available to guide you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+18888541959">
-                <Button size="lg" className="neon-glow">
-                  Call Support: (888) 854-1959
-                </Button>
-              </a>
-              <Button size="lg" variant="secondary">
-                Live Chat
-              </Button>
+              <PhoneButton className="neon-glow" size="lg">{"(888) 854-1959"}</PhoneButton>
+              <PhoneButton className="" size="lg" variant="secondary">Call Now</PhoneButton>
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { DISPLAY_PHONE, BRAND_NAME, LAUNCH_YEAR } from "@/lib/constants";
 
 const Terms = () => {
   return (
@@ -17,24 +18,25 @@ const Terms = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Terms & <span className="text-highlight">Conditions</span>
             </h1>
-            <p className="text-muted-foreground mb-8">Last updated: January 2025</p>
+            <p className="text-muted-foreground mb-8">Last updated: January {LAUNCH_YEAR}</p>
 
-            <div className="prose prose-invert max-w-none">
-              <section className="mb-8">
+            <div className="mb-6 text-sm text-muted-foreground">
+              Disclosure: {BRAND_NAME} is an independent third-party service assistance startup, launched in {LAUNCH_YEAR}. We are not affiliated with, endorsed by, or sponsored by any cable, internet, or streaming provider.
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-8 md:p-12">
+              <div className="prose prose-invert max-w-none">
+                <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
                 <p className="text-muted-foreground mb-4">
-                  By accessing and using Universal Net's internet services, you accept and
-                  agree to be bound by these Terms and Conditions. If you do not agree to these
-                  terms, please do not use our services.
+                  By using this site to request assistance, you agree to these Terms. If you do not accept these Terms, please do not use our assistance services.
                 </p>
               </section>
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">2. Service Description</h2>
                 <p className="text-muted-foreground mb-4">
-                  Universal Net provides fiber-optic internet connectivity services. We strive to
-                  maintain 99.9% network uptime, but service may be interrupted for maintenance,
-                  upgrades, or due to circumstances beyond our control.
+                  {BRAND_NAME} provides independent assistance and guidance related to cable, internet, and streaming services. We do not provide connectivity, sell plans, or operate a network.
                 </p>
               </section>
 
@@ -55,10 +57,7 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">4. Payment Terms</h2>
                 <p className="text-muted-foreground mb-4">
-                  You agree to pay all fees associated with your selected service plan. Payments
-                  are due monthly in advance. Late payments may result in service suspension or
-                  termination. Early termination fees may apply if you cancel before your contract
-                  term ends.
+                  When you purchase assistance from {BRAND_NAME}, any fees for our assistance are separate from provider charges. Provider billing remains unchanged. Please review the Refund Policy for eligibility and timelines.
                 </p>
               </section>
 
@@ -101,11 +100,12 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">9. Contact Information</h2>
                 <p className="text-muted-foreground">
-                  For questions about these Terms and Conditions, contact us at:<br />
+                  For questions about these Terms, contact our support team at:<br />
                   Email: legal@universalnet.com<br />
-                  Phone: (888) 854-1959
+                  Phone: {DISPLAY_PHONE}
                 </p>
               </section>
+              </div>
             </div>
           </motion.div>
         </div>

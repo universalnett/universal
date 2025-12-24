@@ -21,8 +21,9 @@ const About = () => {
               About <span className="text-highlight">Universal Net</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              We're pioneering the future of connectivity with cutting-edge fiber infrastructure
-              and unwavering commitment to customer satisfaction.
+              Universal Net provides independent third-party service assistance and guidance for
+              cable, internet, and streaming customers. We help with account, billing, and
+              service navigation — we do not sell plans or act as a service provider.
             </p>
           </motion.div>
 
@@ -40,9 +41,9 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
               <p className="text-muted-foreground">
-                To deliver ultra-fast, reliable fiber internet connectivity that empowers
-                individuals and businesses to thrive in an increasingly digital world, while
-                maintaining the highest standards of service excellence.
+                To empower consumers with clear, unbiased assistance on account, billing, and
+                service-related matters — helping people resolve issues and make informed
+                decisions when dealing with cable, internet, and streaming providers.
               </p>
             </motion.div>
 
@@ -58,9 +59,9 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
               <p className="text-muted-foreground">
-                To become the nation's leading fiber internet provider, connecting every home and
-                business with world-class infrastructure that enables limitless digital possibilities
-                and drives economic growth.
+                To be the nation's most trusted independent assistance resource for customers
+                navigating service, billing, and account challenges — recognized for clarity,
+                neutrality, and results.
               </p>
             </motion.div>
           </div>
@@ -76,21 +77,20 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-muted-foreground mb-4">
-                Founded in 2015, Universal Net began with a simple yet ambitious goal: to
-                revolutionize internet connectivity by bringing fiber-optic technology to
-                underserved communities. What started as a small regional operation has grown
-                into a nationwide network serving over 10,000 customers across 50+ cities.
+                Launched in 2025 as an independent third-party assistance startup, Universal Net
+                was created to help customers navigate complex account and billing issues with
+                cable, internet, and streaming providers. Our focus is on advocacy, clarity,
+                and practical resolution — not selling service plans.
               </p>
               <p className="text-muted-foreground mb-4">
-                Our journey has been driven by innovation, customer-first values, and an
-                unwavering belief that everyone deserves access to lightning-fast, reliable
-                internet. We've invested millions in cutting-edge infrastructure, assembled a
-                team of industry experts, and maintained our commitment to exceptional service.
+                Our work is driven by a customer-first approach: listening carefully, providing
+                transparent guidance, and escalating issues when needed so customers get fair
+                outcomes.
               </p>
               <p className="text-muted-foreground">
-                Today, we continue to expand our network, enhance our services, and set new
-                standards for what an internet service provider can be. Our story is one of
-                growth, innovation, and dedication to connecting communities.
+                We partner with consumer advocates and maintain strict neutrality to ensure
+                our recommendations and support remain unbiased and focused on the customer's
+                best interest.
               </p>
             </div>
           </motion.div>

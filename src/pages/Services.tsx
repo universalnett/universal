@@ -18,101 +18,68 @@ const Services = () => {
   const allServices = [
     {
       icon: Globe,
-      title: "Fiber Broadband",
-      description: "Lightning-fast fiber internet with speeds up to 10 Gbps for homes and businesses.",
+      title: "Billing & Account Assistance",
+      description: "Help understanding bills, charges, and account statements from providers.",
       features: [
-        "Symmetric Upload/Download Speeds",
-        "99.9% Network Uptime Guarantee",
-        "Unlimited Data Usage",
-        "IPv6 Ready Infrastructure"
+        "Bill review and explanation",
+        "Charge dispute guidance",
+        "Payment plan assistance",
+        "Provider communication templates"
       ]
     },
     {
       icon: Smartphone,
-      title: "Business Internet",
-      description: "Enterprise-grade connectivity solutions with dedicated bandwidth and priority support.",
+      title: "Plan Comparison & Guidance",
+      description: "Neutral, educational comparisons of plans and features to help you choose.",
       features: [
-        "Dedicated Fiber Connections",
-        "SLA-Backed Service Guarantees",
-        "Scalable Bandwidth Options",
-        "Business-Grade Equipment"
+        "Plan feature breakdowns",
+        "Side-by-side comparisons",
+        "Cost vs. value analysis",
+        "Provider requirement explanations"
       ]
     },
     {
       icon: Shield,
-      title: "Network Security",
-      description: "Comprehensive security solutions to protect your network and data from threats.",
+      title: "Technical Troubleshooting Guidance",
+      description: "Step-by-step guidance to troubleshoot common connectivity issues with your provider.",
       features: [
-        "Advanced DDoS Protection",
-        "Managed Firewall Services",
-        "Real-time Threat Monitoring",
-        "Security Incident Response"
+        "Connection diagnosis steps",
+        "Router and Wi‑Fi guidance",
+        "Signal and speed checks",
+        "When to escalate to provider"
       ]
     },
     {
       icon: Cloud,
-      title: "Cloud Services",
-      description: "Reliable cloud infrastructure and hosting solutions for modern businesses.",
+      title: "Provider Escalation Support",
+      description: "Assistance preparing and escalating issues to providers for faster resolution.",
       features: [
-        "Private Cloud Hosting",
-        "Cloud Backup Solutions",
-        "Hybrid Cloud Architecture",
-        "Disaster Recovery Services"
+        "Issue documentation",
+        "Escalation templates",
+        "Follow-up coordination",
+        "Advocacy best practices"
       ]
     },
     {
       icon: Network,
-      title: "Managed Networks",
-      description: "Complete network management and optimization services for enterprise clients.",
+      title: "Onboarding & Setup Help",
+      description: "Guidance through new-service setup, activation steps, and modem/router configuration.",
       features: [
-        "24/7 Network Monitoring",
-        "Performance Optimization",
-        "Network Design & Planning",
-        "Equipment Maintenance"
-      ]
-    },
-    {
-      icon: Server,
-      title: "Colocation Services",
-      description: "Secure data center space with enterprise-grade infrastructure and connectivity.",
-      features: [
-        "Tier III Data Centers",
-        "Redundant Power Systems",
-        "Physical Security 24/7",
-        "Direct Fiber Connectivity"
-      ]
-    },
-    {
-      icon: Zap,
-      title: "Fiber Installation",
-      description: "Professional fiber optic installation and deployment services.",
-      features: [
-        "Site Survey & Planning",
-        "Professional Installation",
-        "Quality Testing & Validation",
-        "Post-Installation Support"
+        "Activation walkthroughs",
+        "Router setup guidance",
+        "Service verification steps",
+        "Provider checklist"
       ]
     },
     {
       icon: Headphones,
-      title: "24/7 Support",
-      description: "Round-the-clock technical support from our expert team.",
+      title: "Privacy & Security Advice",
+      description: "Recommendations to protect your account and personal data when interacting with providers.",
       features: [
-        "Phone & Email Support",
-        "Live Chat Assistance",
-        "On-Site Technical Support",
-        "Proactive Monitoring"
-      ]
-    },
-    {
-      icon: Lock,
-      title: "Cybersecurity",
-      description: "Advanced cybersecurity solutions to safeguard your digital assets.",
-      features: [
-        "Vulnerability Assessments",
-        "Penetration Testing",
-        "Security Compliance",
-        "Incident Management"
+        "Credential safety tips",
+        "Privacy settings review",
+        "Phishing awareness",
+        "Secure communication practices"
       ]
     }
   ];

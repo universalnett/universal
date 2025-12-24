@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Wifi } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import PhoneButton from "@/components/PhoneButton";
+import { DISPLAY_PHONE } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar = () => {
@@ -55,11 +56,7 @@ export const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </Link>
             ))}
-            <a href="tel:+18888541959">
-              <Button size="sm" className="neon-glow-strong">
-                (888) 854-1959
-              </Button>
-            </a>
+            <PhoneButton size="sm" className="neon-glow-strong" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,11 +102,9 @@ export const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <a href="tel:+18888541959" onClick={() => setIsOpen(false)}>
-                <Button size="sm" className="neon-glow-strong w-full">
-                  (888) 854-1959
-                </Button>
-              </a>
+              <div onClick={() => setIsOpen(false)}>
+                <PhoneButton size="sm" className="neon-glow-strong w-full" />
+              </div>
             </div>
           </motion.div>
         )}

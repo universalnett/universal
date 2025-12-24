@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import PhoneButton from "@/components/PhoneButton";
+import { DISPLAY_PHONE } from "@/lib/constants";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Check, Zap, Building2, Rocket } from "lucide-react";
@@ -9,56 +10,37 @@ const Plans = () => {
   const plans = [
     {
       icon: Zap,
-      name: "Home Basic",
-      speed: "100 Mbps",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for browsing, streaming, and everyday use",
+      name: "Home Basic (example)",
+      description: "A common entry-level archetype for light households. Use this to compare basic features.",
       features: [
-        "100 Mbps symmetric speed",
-        "Unlimited data usage",
-        "Free router included",
-        "24/7 customer support",
-        "Free installation",
-        "No contracts required"
+        "Typical speed tier to support browsing and streaming",
+        "Check for data caps and equipment fees",
+        "Confirm installation and setup responsibilities",
+        "Ask about support response times"
       ],
       popular: false
     },
     {
       icon: Rocket,
-      name: "Home Premium",
-      speed: "500 Mbps",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for families and power users",
+      name: "Home Premium (example)",
+      description: "An illustrative mid-tier archetype for families and heavier usage.",
       features: [
-        "500 Mbps symmetric speed",
-        "Unlimited data usage",
-        "Advanced WiFi 6 router",
-        "Priority customer support",
-        "Free installation & setup",
-        "No contracts required",
-        "Parental controls included",
-        "Network security suite"
+        "Higher speed tiers and improved Wi‑Fi equipment",
+        "Look for priority support and router details",
+        "Review contract terms and promotional expirations",
+        "Understand bundled services and charges"
       ],
       popular: true
     },
     {
       icon: Building2,
-      name: "Business Pro",
-      speed: "1 Gbps",
-      price: "$149",
-      period: "/month",
-      description: "Enterprise-grade connectivity for businesses",
+      name: "Business Pro (example)",
+      description: "A representative business archetype used for comparison when reviewing contracts.",
       features: [
-        "1 Gbps symmetric speed",
-        "Unlimited data usage",
-        "Business-grade equipment",
-        "Dedicated support team",
-        "SLA-backed uptime guarantee",
-        "Static IP addresses (5)",
-        "Priority installation",
-        "Free on-site support"
+        "Consider SLAs, static IP options, and support SLA",
+        "Clarify installation windows and on-site responsibilities",
+        "Confirm billing cycles and prorations",
+        "Evaluate escalation paths for outages"
       ],
       popular: false
     }
@@ -78,11 +60,10 @@ const Plans = () => {
             className="text-center max-w-4xl mx-auto mb-16"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Choose Your <span className="text-highlight">Perfect Plan</span>
+              Plan Guidance & Assistance
             </h1>
             <p className="text-xl text-muted-foreground">
-              Lightning-fast fiber internet plans for homes and businesses. No hidden fees,
-              no data caps, just pure speed.
+              We provide independent, descriptive guidance to help you compare plans and understand what matters for your home or business. We do not sell plans.
             </p>
           </motion.div>
 
@@ -110,11 +91,6 @@ const Plans = () => {
                     </div>
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
-                    <div className="mb-2">
-                      <span className="text-5xl font-bold">{plan.price}</span>
-                      <span className="text-muted-foreground">{plan.period}</span>
-                    </div>
-                    <p className="text-3xl font-bold text-primary">{plan.speed}</p>
                   </CardHeader>
 
                   <CardContent className="pt-0">
@@ -126,12 +102,7 @@ const Plans = () => {
                         </li>
                       ))}
                     </ul>
-                    <Button 
-                      className={`w-full ${plan.popular ? 'neon-glow' : ''}`}
-                      variant={plan.popular ? 'default' : 'secondary'}
-                    >
-                      Get Started
-                    </Button>
+                    <PhoneButton className={`w-full ${plan.popular ? 'neon-glow' : ''}`} variant={plan.popular ? 'default' : 'secondary'}>{DISPLAY_PHONE}</PhoneButton>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -148,15 +119,12 @@ const Plans = () => {
           >
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Need <span className="text-highlight">Enterprise Solutions</span>?
+                Need enterprise assistance?
               </h2>
               <p className="text-muted-foreground mb-8">
-                For businesses requiring custom bandwidth, dedicated support, and tailored SLAs,
-                our enterprise team can design a solution that fits your exact needs.
+                We guide businesses through contract review, provider conversations, and migration planning. Our role is advisory and facilitative — we do not provide connectivity or sell plans.
               </p>
-              <Button size="lg" className="neon-glow">
-                Contact Sales Team
-              </Button>
+              <PhoneButton size="lg" className="neon-glow">{DISPLAY_PHONE}</PhoneButton>
             </div>
           </motion.div>
 
@@ -168,22 +136,22 @@ const Plans = () => {
             transition={{ duration: 0.8 }}
             className="mt-20"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Why Choose <span className="text-highlight">Universal Net</span>?
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Why Use Our Guidance?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "No Hidden Fees",
-                  description: "What you see is what you pay. No surprise charges or hidden costs."
+                  title: "Neutral Advice",
+                  description: "We provide descriptive, unbiased information to help you decide."
                 },
                 {
-                  title: "99.9% Uptime",
-                  description: "Industry-leading reliability with SLA-backed uptime guarantees."
+                  title: "Actionable Steps",
+                  description: "Practical checklists and escalation templates to speed resolution."
                 },
                 {
-                  title: "Local Support",
-                  description: "Real people, real help. 24/7 support from our expert team."
+                  title: "Local Help",
+                  description: "Experienced people who understand common provider workflows."
                 }
               ].map((feature, index) => (
                 <div key={index} className="text-center">

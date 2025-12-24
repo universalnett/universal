@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import PhoneButton from "@/components/PhoneButton";
+import { DISPLAY_PHONE } from "@/lib/constants";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -54,11 +55,10 @@ const Coverage = () => {
             className="max-w-4xl mb-16"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Check Our <span className="text-highlight">Coverage</span>
+              Check Provider <span className="text-highlight">Availability</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Find out if fiber internet is available in your area. We're constantly expanding
-              our network to bring ultra-fast connectivity to more communities.
+              We can help you check whether providers serve your address and explain the next steps to pursue service. We do not provide network connectivity ourselves — we provide neutral assistance and guidance.
             </p>
 
             {/* Address Search */}
@@ -74,10 +74,9 @@ const Coverage = () => {
                       />
                     </div>
                   </div>
-                  <Button className="neon-glow">
-                    <Search className="w-4 h-4 mr-2" />
-                    Check Availability
-                  </Button>
+                  <PhoneButton className="neon-glow">
+                    <Search className="w-4 h-4 mr-2" /> {DISPLAY_PHONE}
+                  </PhoneButton>
                 </div>
               </CardContent>
             </Card>
@@ -96,7 +95,7 @@ const Coverage = () => {
                 <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Interactive Coverage Map</h3>
                 <p className="text-muted-foreground">
-                  Coverage map visualization would be displayed here
+                  Coverage map visualization (provider availability) would be shown here — this is for reference only.
                 </p>
               </div>
             </Card>
@@ -167,12 +166,9 @@ const Coverage = () => {
               Don't see your <span className="text-highlight">area</span>?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We're constantly expanding our network. Register your interest and we'll notify
-              you when fiber internet becomes available in your area.
+              If you want assistance checking provider availability or need help communicating interest to a provider, call our team and we will guide you through the process.
             </p>
-            <Button size="lg" className="neon-glow">
-              Register Interest
-            </Button>
+            <PhoneButton size="lg" className="neon-glow">{DISPLAY_PHONE}</PhoneButton>
           </motion.div>
         </div>
       </main>

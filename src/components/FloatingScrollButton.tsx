@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import PhoneButton from '@/components/PhoneButton';
+import { DISPLAY_PHONE } from '@/lib/constants';
 
 const FloatingScrollButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,13 +34,9 @@ const FloatingScrollButton = () => {
   return (
     <>
       {isVisible && (
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full p-0 shadow-lg hover:shadow-xl transition-all duration-300 neon-glow"
-          aria-label="Scroll to top"
-        >
-          <ChevronUp className="w-6 h-6" />
-        </Button>
+        <div className="fixed bottom-8 right-8 z-50">
+          <PhoneButton className="w-44 h-12 rounded-full p-0 shadow-lg hover:shadow-xl transition-all duration-300 neon-glow">{DISPLAY_PHONE}</PhoneButton>
+        </div>
       )}
     </>
   );

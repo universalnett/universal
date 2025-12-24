@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Wifi, Phone, Zap } from "lucide-react";
+import PhoneButton from "./PhoneButton";
+import { BRAND_NAME, DISPLAY_PHONE, LAUNCH_YEAR } from "@/lib/constants";
 
 export const Footer = () => {
   return (
@@ -16,12 +18,12 @@ export const Footer = () => {
           <div>
             <div className="mb-6">
               <span className="text-3xl font-bold tracking-tight">
-                Universal <span className="text-primary">Net</span>
+                {BRAND_NAME}
               </span>
-              <p className="text-xs text-muted-foreground mt-1">High-Speed Internet Provider</p>
+              <p className="text-xs text-muted-foreground mt-1">Independent third-party assistance startup</p>
             </div>
             <p className="text-lg text-muted-foreground mb-6 max-w-md">
-              Ultra-fast cable internet for homes and businesses. Experience the future of connectivity with speeds up to 1Gbps.
+              We assist customers with account, billing, and service guidance for cable, internet, and streaming providers. We do not sell plans or act as a service provider.
             </p>
           </div>
 
@@ -38,9 +40,7 @@ export const Footer = () => {
                 placeholder="Enter your email" 
                 className="flex-1 px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:outline-none transition-colors"
               />
-              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:scale-105 transition-transform neon-glow">
-                Subscribe
-              </button>
+              <PhoneButton className="px-6 py-3 rounded-xl font-semibold neon-glow">{DISPLAY_PHONE}</PhoneButton>
             </div>
           </div>
         </div>
@@ -55,6 +55,8 @@ export const Footer = () => {
               <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 inline-block transition-all">About Us</Link></li>
               <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 inline-block transition-all">Services</Link></li>
               <li><Link to="/plans" className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 inline-block transition-all">Plans</Link></li>
+              <li><Link to="/faq" className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 inline-block transition-all">FAQ</Link></li>
+              <li><Link to="/disclaimer" className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 inline-block transition-all">Disclaimer</Link></li>
             </ul>
           </div>
 
@@ -85,7 +87,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+18888541959" className="text-sm text-muted-foreground hover:text-primary transition-colors">(888) 854-1959</a>
+                <a href={`tel:${"+18888541959"}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">{DISPLAY_PHONE}</a>
               </li>
             </ul>
           </div>
@@ -95,7 +97,7 @@ export const Footer = () => {
         <div className="border-t border-border pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2025 Universal Net. All rights reserved.
+              © {LAUNCH_YEAR} {BRAND_NAME}. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <span className="text-xs text-muted-foreground">Made with ❤️ for fast internet</span>
@@ -107,6 +109,15 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+        
+        {/* Disclosure - visible in footer on every page */}
+        <div className="mt-6 text-xs text-muted-foreground">
+          {BRAND_NAME} is an independent third-party service assistance startup, launched in {LAUNCH_YEAR}. We provide neutral assistance and guidance and are not affiliated with, endorsed by, or sponsored by any cable, internet, or streaming service provider. All trademarks belong to their respective owners.
+          <div className="mt-2">
+            <Link to="/faq" className="text-xs text-muted-foreground hover:text-primary mr-4">FAQ</Link>
+            <Link to="/disclaimer" className="text-xs text-muted-foreground hover:text-primary">Disclaimer</Link>
+          </div>
+        </div>
     </footer>
   );
 };

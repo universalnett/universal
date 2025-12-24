@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { DISPLAY_PHONE, BRAND_NAME, LAUNCH_YEAR } from "@/lib/constants";
 
 const Privacy = () => {
   return (
@@ -17,51 +18,33 @@ const Privacy = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Privacy <span className="text-highlight">Policy</span>
             </h1>
-            <p className="text-muted-foreground mb-8">Last updated: January 2025</p>
+            <p className="text-muted-foreground mb-8">Last updated: January {LAUNCH_YEAR}</p>
 
-            <div className="prose prose-invert max-w-none">
-              <section className="mb-8">
+            <div className="mb-6 text-sm text-muted-foreground">
+              Disclosure: {BRAND_NAME} is an independent third-party service assistance startup, launched in {LAUNCH_YEAR}. We are not affiliated with any provider.
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-8 md:p-12">
+              <div className="prose prose-invert max-w-none">
+                <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
                 <p className="text-muted-foreground mb-4">
-                  Universal Net collects information that you provide directly to us when you
-                  create an account, subscribe to our services, or contact us for support. This may include:
+                  We collect the information you share when you request assistance, such as name, contact details, and details about the issue you're seeking help with. We never request provider passwords or other sensitive authentication credentials.
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>Name, email address, and contact information</li>
-                  <li>Billing and payment information</li>
-                  <li>Service address and installation details</li>
-                  <li>Technical support and communication records</li>
-                  <li>Network usage data and service performance metrics</li>
-                </ul>
               </section>
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">2. How We Use Your Information</h2>
                 <p className="text-muted-foreground mb-4">
-                  We use the information we collect to:
+                  We use collected information to deliver the assistance you request, facilitate communications with providers with your permission, process payments for our assistance, and improve our guidance services. We do not use your data to impersonate providers.
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>Provide, maintain, and improve our internet services</li>
-                  <li>Process your payments and manage your account</li>
-                  <li>Send you service updates, technical notices, and support messages</li>
-                  <li>Respond to your requests, questions, and feedback</li>
-                  <li>Monitor and analyze network performance and usage</li>
-                  <li>Detect, prevent, and address technical issues and security threats</li>
-                </ul>
               </section>
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">3. Information Sharing and Disclosure</h2>
                 <p className="text-muted-foreground mb-4">
-                  We do not sell your personal information. We may share your information in the
-                  following circumstances:
+                  We do not sell your personal information. We may share information with service providers who assist us, to comply with law, or with your consent. We will not request provider passwords as a condition of assistance.
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>With service providers who perform services on our behalf</li>
-                  <li>In response to legal requests or to comply with applicable laws</li>
-                  <li>To protect the rights, property, and safety of Universal Net and our users</li>
-                  <li>With your consent or at your direction</li>
-                </ul>
               </section>
 
               <section className="mb-8">
@@ -94,10 +77,11 @@ const Privacy = () => {
                 </p>
                 <p className="text-muted-foreground">
                   Email: privacy@universalnet.com<br />
-                  Phone: (888) 854-1959<br />
+                  Phone: {DISPLAY_PHONE}<br />
                   Address: 123 Fiber Street, Tech City, TC 12345
                 </p>
               </section>
+              </div>
             </div>
           </motion.div>
         </div>
