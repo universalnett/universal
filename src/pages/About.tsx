@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Target, Eye, Award, Users } from "lucide-react";
+import { Target, Eye, Award, Users, AlertCircle } from "lucide-react";
+import { BRAND_NAME, LAUNCH_YEAR } from "@/lib/constants";
 
 const About = () => {
   return (
@@ -24,6 +25,26 @@ const About = () => {
               Universal Net provides independent third-party service assistance and guidance for
               cable, internet, and streaming customers. We help with account, billing, and
               service navigation — we do not sell plans or act as a service provider.
+            </p>
+          </motion.div>
+
+          {/* Compliance Disclaimer - MUST APPEAR EARLY */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-br from-primary/10 to-transparent rounded-2xl p-8 md:p-12 border border-primary/30 mb-20"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <AlertCircle className="w-8 h-8 text-primary flex-shrink-0" />
+              <h2 className="text-2xl md:text-3xl font-bold">Important Disclosure</h2>
+            </div>
+            <p className="text-lg text-muted-foreground mb-4">
+              <strong>{BRAND_NAME} is an independent third-party service assistance provider.</strong>
+            </p>
+            <p className="text-muted-foreground">
+              We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. We do not represent or partner with any ISP, telecom company, or cable provider. Our role is limited to independent guidance and informational support only.
             </p>
           </motion.div>
 

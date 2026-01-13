@@ -1,49 +1,25 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
-import { DISPLAY_PHONE } from "@/lib/constants";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { DISPLAY_PHONE, BRAND_NAME } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { Check, Zap, Building2, Rocket } from "lucide-react";
+import { CheckCircle, AlertCircle } from "lucide-react";
 
 const Plans = () => {
-  const plans = [
-    {
-      icon: Zap,
-      name: "Home Basic (example)",
-      description: "A common entry-level archetype for light households. Use this to compare basic features.",
-      features: [
-        "Typical speed tier to support browsing and streaming",
-        "Check for data caps and equipment fees",
-        "Confirm installation and setup responsibilities",
-        "Ask about support response times"
-      ],
-      popular: false
-    },
-    {
-      icon: Rocket,
-      name: "Home Premium (example)",
-      description: "An illustrative mid-tier archetype for families and heavier usage.",
-      features: [
-        "Higher speed tiers and improved Wi‑Fi equipment",
-        "Look for priority support and router details",
-        "Review contract terms and promotional expirations",
-        "Understand bundled services and charges"
-      ],
-      popular: true
-    },
-    {
-      icon: Building2,
-      name: "Business Pro (example)",
-      description: "A representative business archetype used for comparison when reviewing contracts.",
-      features: [
-        "Consider SLAs, static IP options, and support SLA",
-        "Clarify installation windows and on-site responsibilities",
-        "Confirm billing cycles and prorations",
-        "Evaluate escalation paths for outages"
-      ],
-      popular: false
-    }
+  const whatWeDo = [
+    "Help you understand internet and broadband service options",
+    "Provide neutral, descriptive guidance on common plan features",
+    "Explain technical terms and service requirements",
+    "Offer checklists to help evaluate what matters most to you",
+    "Guide you through common provider processes"
+  ];
+
+  const whatWeDoNot = [
+    "Sell internet or cable subscriptions",
+    "Act as an Internet Service Provider (ISP)",
+    "Provide official customer support for any brand",
+    "Represent or partner with any telecom or cable company",
+    "Guarantee specific outcomes with service providers"
   ];
 
   return (
@@ -60,106 +36,133 @@ const Plans = () => {
             className="text-center max-w-4xl mx-auto mb-16"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Plan Guidance & Assistance
+              Plan Guidance & Service Assistance
             </h1>
             <p className="text-xl text-muted-foreground">
-              We provide independent, descriptive guidance to help you compare plans and understand what matters for your home or business. We do not sell plans.
+              {BRAND_NAME} is an independent third-party service assistance provider. We provide neutral guidance to help you understand internet, broadband, and cable TV service options.
             </p>
           </motion.div>
 
-          {/* Plans Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            {plans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className={`relative h-full ${plan.popular ? 'border-primary shadow-lg shadow-primary/20' : 'border-border'}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold neon-glow">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <CardHeader className="text-center pb-8 pt-8">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <plan.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
-                  </CardHeader>
+          {/* What We Do - Compliant Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-gradient-to-br from-primary/10 to-transparent rounded-2xl p-8 border border-primary/30">
+                <div className="flex items-center gap-3 mb-6">
+                  <CheckCircle className="w-8 h-8 text-primary flex-shrink-0" />
+                  <h2 className="text-2xl font-bold">What We Provide</h2>
+                </div>
+                <ul className="space-y-4">
+                  {whatWeDo.map((item, idx) => (
+                    <li key={idx} className="flex gap-3">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
 
-                  <CardContent className="pt-0">
-                    <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <PhoneButton className={`w-full ${plan.popular ? 'neon-glow' : ''}`} variant={plan.popular ? 'default' : 'secondary'}>{DISPLAY_PHONE}</PhoneButton>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-gradient-to-br from-destructive/10 to-transparent rounded-2xl p-8 border border-destructive/30">
+                <div className="flex items-center gap-3 mb-6">
+                  <AlertCircle className="w-8 h-8 text-destructive flex-shrink-0" />
+                  <h2 className="text-2xl font-bold">What We Are NOT</h2>
+                </div>
+                <ul className="space-y-4">
+                  {whatWeDoNot.map((item, idx) => (
+                    <li key={idx} className="flex gap-3">
+                      <span className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Enterprise Section */}
+          {/* Compliance Statement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-card to-secondary rounded-2xl p-8 md:p-12 border border-border"
+            className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-20"
           >
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Need enterprise assistance?
-              </h2>
-              <p className="text-muted-foreground mb-8">
-                We guide businesses through contract review, provider conversations, and migration planning. Our role is advisory and facilitative — we do not provide connectivity or sell plans.
-              </p>
-              <PhoneButton size="lg" className="neon-glow">{DISPLAY_PHONE}</PhoneButton>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Important Disclaimer</h2>
+            <p className="text-muted-foreground mb-4">
+              <strong>{BRAND_NAME} is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. Brand names, if mentioned, are used strictly for informational purposes only.
+            </p>
+            <p className="text-muted-foreground">
+              Our role is limited to independent guidance and informational support. We cannot guarantee outcomes with third-party service providers, nor do we represent or speak on behalf of any ISP, telecom company, or cable provider.
+            </p>
           </motion.div>
 
-          {/* Features Comparison */}
+          {/* How We Help Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mt-20"
+            className="mb-20"
           >
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Why Use Our Guidance?
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              How We Help You Navigate Service Options
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "Neutral Advice",
-                  description: "We provide descriptive, unbiased information to help you decide."
+                  title: "Understand Your Options",
+                  description: "Learn what features matter, what questions to ask, and what to look for when evaluating services."
                 },
                 {
-                  title: "Actionable Steps",
-                  description: "Practical checklists and escalation templates to speed resolution."
+                  title: "Get Clear Explanations",
+                  description: "We translate industry jargon and explain technical requirements in simple, practical terms."
                 },
                 {
-                  title: "Local Help",
-                  description: "Experienced people who understand common provider workflows."
+                  title: "Prepare for Conversations",
+                  description: "We provide checklists, templates, and talking points to help you communicate effectively with providers."
                 }
               ].map((feature, index) => (
-                <div key={index} className="text-center">
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-card border border-border rounded-xl p-6 text-center"
+                >
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
+          </motion.div>
+
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-8 md:p-12 border border-primary/30 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Get Independent Guidance?
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Talk to our independent service advisors. We'll help you understand your options and navigate service provider processes.
+            </p>
+            <PhoneButton size="lg" className="neon-glow">{DISPLAY_PHONE}</PhoneButton>
           </motion.div>
         </div>
       </main>

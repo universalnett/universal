@@ -60,10 +60,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "10K+", label: "Happy Customers" },
-    { number: "99.9%", label: "Network Uptime" },
-    { number: "24/7", label: "Support Available" },
-    { number: "50+", label: "Cities Covered" }
+    { number: "10K+", label: "People Assisted" },
+    { number: "100%", label: "Independent" },
+    { number: "24/7", label: "Available" },
+    { number: "50+", label: "Service Areas" }
   ];
 
   return (
@@ -187,7 +187,7 @@ const Index = () => {
             >
               <img
                 src={fiberNetwork}
-                alt="Fiber Optic Network Infrastructure"
+                alt="Network infrastructure"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
             </motion.div>
@@ -200,28 +200,28 @@ const Index = () => {
               className="order-1 lg:order-2"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Expert guidance backed by experience
+                Expert guidance on service options
               </h2>
               <p className="text-muted-foreground mb-6">
-                Our team focuses on clear, practical advice for navigating provider processes,
-                resolving billing issues, and improving the outcome of support interactions.
+                We provide practical advice for understanding provider offerings,
+                resolving billing issues, and improving support interactions.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-card border border-border rounded-lg p-4">
                   <p className="text-3xl font-bold text-primary mb-1">100%</p>
-                  <p className="text-sm text-muted-foreground">Fiber Network</p>
+                  <p className="text-sm text-muted-foreground">Independent</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4">
-                  <p className="text-3xl font-bold text-primary mb-1">10x</p>
-                  <p className="text-sm text-muted-foreground">Faster Upload</p>
+                  <p className="text-3xl font-bold text-primary mb-1">24/7</p>
+                  <p className="text-sm text-muted-foreground">Available</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4">
-                  <p className="text-3xl font-bold text-primary mb-1">50ms</p>
-                  <p className="text-sm text-muted-foreground">Ultra-Low Latency</p>
+                  <p className="text-3xl font-bold text-primary mb-1">Neutral</p>
+                  <p className="text-sm text-muted-foreground">Not an ISP</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4">
-                  <p className="text-3xl font-bold text-primary mb-1">∞</p>
-                  <p className="text-sm text-muted-foreground">No Data Caps</p>
+                  <p className="text-3xl font-bold text-primary mb-1">Proven</p>
+                  <p className="text-sm text-muted-foreground">Track Record</p>
                 </div>
               </div>
             </motion.div>
@@ -298,11 +298,10 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Assistance that supports your household
+                Support for your household
               </h2>
               <p className="text-muted-foreground mb-6">
-                We help families navigate provider options and setup processes so everyone can
-                stay connected with less hassle.
+                We help families understand service options, troubleshoot issues, and get fair outcomes from their chosen provider.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-4">
@@ -310,9 +309,9 @@ const Index = () => {
                     <Users className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Family-Focused Assistance</h3>
+                    <h3 className="font-semibold mb-1">Clear Service Guidance</h3>
                     <p className="text-sm text-muted-foreground">
-                      Help choosing and configuring options that work best for multiple users
+                      Help understanding service options that work for your household needs
                     </p>
                   </div>
                 </div>
@@ -321,9 +320,9 @@ const Index = () => {
                     <Shield className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Parental Controls</h3>
+                    <h3 className="font-semibold mb-1">Safety & Security Tips</h3>
                     <p className="text-sm text-muted-foreground">
-                      Keep your kids safe online with built-in content filtering
+                      Guidance on protecting your account and personal information online
                     </p>
                   </div>
                 </div>
@@ -332,9 +331,9 @@ const Index = () => {
                     <Smartphone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Smart Home Ready</h3>
+                    <h3 className="font-semibold mb-1">Setup Assistance</h3>
                     <p className="text-sm text-muted-foreground">
-                      Connect all your IoT devices without network congestion
+                      Help with provider activation, setup, and initial configuration
                     </p>
                   </div>
                 </div>
@@ -350,7 +349,7 @@ const Index = () => {
             >
               <img
                 src={familyInternet}
-                alt="Family enjoying fast internet"
+                alt="Family enjoying connected home"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
             </motion.div>
@@ -425,14 +424,13 @@ const Index = () => {
               <div className="bg-primary p-12 rounded-3xl transform lg:-rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
                 <div className="transform lg:rotate-3">
                   <h2 className="text-3xl md:text-5xl font-bold mb-6 text-primary-foreground">
-                    Ready to experience{" "}
+                    Ready for independent{" "}
                     <span className="bg-white text-primary px-3 py-1 rounded-lg inline-block">
-                      blazing-fast
-                    </span>{" "}
-                    internet?
+                      service assistance?
+                    </span>
                   </h2>
                   <p className="text-primary-foreground/90 text-lg mb-8">
-                    Join thousands of satisfied customers enjoying ultra-reliable fiber connectivity.
+                    Talk to our advisors for guidance on internet and cable service options.
                   </p>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="flex -space-x-2">
@@ -440,7 +438,7 @@ const Index = () => {
                       <div className="w-10 h-10 rounded-full bg-white/30 border-2 border-white" />
                       <div className="w-10 h-10 rounded-full bg-white/40 border-2 border-white" />
                     </div>
-                    <span className="text-white font-semibold">10,000+ Happy Customers</span>
+                    <span className="text-white font-semibold">10,000+ People Assisted</span>
                   </div>
                 </div>
               </div>
@@ -457,18 +455,18 @@ const Index = () => {
               <a href={`tel:${"+18888541959"}`} className="block">
                 <div className="group relative p-8 bg-card border-2 border-primary rounded-2xl hover:bg-primary transition-all duration-300 text-left overflow-hidden w-full">
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-foreground transition-colors">{DISPLAY_PHONE}</h3>
-                    <p className="text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">Request assistance by phone</p>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-foreground transition-colors">Call for Third-Party Guidance</h3>
+                    <p className="text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">{DISPLAY_PHONE}</p>
                   </div>
                   <ArrowRight className="absolute bottom-4 right-4 w-8 h-8 text-primary group-hover:text-primary-foreground group-hover:translate-x-2 transition-all" />
                 </div>
               </a>
 
-              <a href={`tel:${"+18888541959"}`} className="block">
+              <a href="/contact" className="block">
                 <div className="group relative p-8 bg-card border-2 border-border rounded-2xl hover:border-primary transition-all duration-300 text-left overflow-hidden w-full">
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2">{DISPLAY_PHONE}</h3>
-                    <p className="text-muted-foreground">Request assistance by phone</p>
+                    <h3 className="text-2xl font-bold mb-2">Contact Our Team</h3>
+                    <p className="text-muted-foreground">Get assistance online</p>
                   </div>
                   <ArrowRight className="absolute bottom-4 right-4 w-8 h-8 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all" />
                 </div>

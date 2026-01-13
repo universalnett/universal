@@ -13,34 +13,46 @@ export const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative z-10">
-        {/* Top Section - Brand & CTA */}
+        {/* Top Section - Brand & Compliance Statement */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16 items-center">
           <div>
             <div className="mb-6">
               <span className="text-3xl font-bold tracking-tight">
                 {BRAND_NAME}
               </span>
-              <p className="text-xs text-muted-foreground mt-1">Independent third-party assistance startup</p>
+              <p className="text-xs text-muted-foreground mt-1">Independent third-party service assistance</p>
             </div>
-            <p className="text-lg text-muted-foreground mb-6 max-w-md">
-              We assist customers with account, billing, and service guidance for cable, internet, and streaming providers. We do not sell plans or act as a service provider.
-            </p>
+            {/* COMPLIANCE STATEMENT - VISIBLE IN FOOTER */}
+            <div className="bg-card/50 border border-border/50 rounded-lg p-4 mb-6">
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                <strong>{BRAND_NAME} is an independent third-party service assistance provider.</strong> We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. Brand names mentioned are for informational purposes only.
+              </p>
+            </div>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact Information - CLEARLY VISIBLE */}
           <div className="bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-8">
-            <div className="flex items-center gap-2 mb-4">
-              <Zap className="w-6 h-6 text-primary" />
-              <h3 className="text-xl font-bold">Get Special Offers</h3>
+            <div className="flex items-center gap-2 mb-6">
+              <Phone className="w-6 h-6 text-primary" />
+              <h3 className="text-xl font-bold">Contact Us</h3>
             </div>
-            <p className="text-sm text-muted-foreground mb-4">Subscribe to receive exclusive deals and updates.</p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:outline-none transition-colors"
-              />
-              <PhoneButton className="px-6 py-3 rounded-xl font-semibold neon-glow">{DISPLAY_PHONE}</PhoneButton>
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs text-muted-foreground mb-1">Phone</p>
+                <a 
+                  href={`tel:+18888541959`} 
+                  className="text-lg font-bold text-primary hover:text-primary/90 transition-colors"
+                >
+                  {DISPLAY_PHONE}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-1">Business Name</p>
+                <p className="text-sm font-semibold">{BRAND_NAME}</p>
+              </div>
+              <p className="text-xs text-muted-foreground pt-2">
+                Available for service inquiries and guidance related to internet and cable services.
+              </p>
             </div>
           </div>
         </div>

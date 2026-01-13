@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const services = [
-    "High-Speed Internet",
-    "Fiber Optic Cable",
-    "Business Internet",
-    "24/7 Tech Support",
-    "WiFi Installation",
-    "Network Security",
+    "Service Guidance",
+    "Account Assistance",
+    "Billing Help",
+    "Technical Support",
+    "Provider Navigation",
+    "Third-Party Support",
   ];
 
   return (
@@ -133,36 +133,35 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white px-4 sm:px-0">
-              Connecting{" "}
-              <span className="inline-block rounded-full relative" style={{ boxShadow: '6px 6px 0px 0px rgb(255, 255, 255)' }}>
-                <a href="tel:+18888541959" className="text-highlight-rounded transition-all relative hover:translate-x-[6px] hover:translate-y-[6px] inline-block">
-                  homes
-                </a>
-              </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white px-4 sm:px-0">
+              Independent Internet & Cable{" "}
               <br />
-              and digital{" "}
-              <span className="inline-block rounded-full relative" style={{ boxShadow: '6px 6px 0px 0px rgb(255, 255, 255)' }}>
-                <a href="tel:+18888541959" className="text-highlight-rounded transition-all relative hover:translate-x-[6px] hover:translate-y-[6px] inline-block">
-                  networks
-                </a>
-                {/* Floating Phone Indicator with Arrow */}
-                <motion.div
-                  animate={{ 
-                    x: [3, 8, 3]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                  className="hidden md:flex absolute -bottom-3 -right-24 items-center gap-1 z-10"
-                >
-                  {/* Arrow pointing left to button */}
-                  <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[8px] border-r-black" />
-                  <div className="bg-black text-primary px-5 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-bold whitespace-nowrap">
-                    <Phone className="w-4 h-4" />
-                    <span>Call Now</span>
-                  </div>
-                </motion.div>
-              </span>
+              Service Assistance
             </h1>
+            <p className="text-lg sm:text-xl text-white/90 mt-6 max-w-2xl mx-auto">
+              Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <a 
+                href="tel:+18888541959"
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-bold text-lg hover:bg-primary/90 transition-colors neon-glow"
+              >
+                Talk to a Third-Party Internet Advisor
+              </a>
+              <a 
+                href="tel:+18888541959"
+                className="px-8 py-4 bg-white/20 text-white rounded-xl font-bold text-lg hover:bg-white/30 transition-colors border border-white/40"
+              >
+                Call for Independent Service Guidance
+              </a>
+            </div>
+            
+            {/* Compliance Micro-Text */}
+            <p className="text-xs sm:text-sm text-white/70 mt-6">
+              Not an ISP. No brand affiliation.
+            </p>
           </motion.div>
         </div>
 
